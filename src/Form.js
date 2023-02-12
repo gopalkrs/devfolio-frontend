@@ -36,7 +36,7 @@ function Form({ styles, setStyles}){
     const formAction = async (e) => {
         e.preventDefault();
         try{
-            const promise = await axios.post(`/api/users`, formData);
+            const promise = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users`, formData);
             console.log(promise);
         }catch(err){
             console.log(err);

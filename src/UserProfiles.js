@@ -11,7 +11,7 @@ function UserProfiles({gitUsername}){
     const githubId = gitUsername.toLowerCase();
 
     const deleteUserHandler= async()=>{
-        const promise = await axios.delete(`/api/users/${githubId}`);
+        const promise = await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api/users/${githubId}`);
         console.log(promise);
     }
 

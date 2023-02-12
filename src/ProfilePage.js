@@ -11,7 +11,7 @@ function ProfilePage(props) {
 
     useEffect(() => {
         const gitUsername = props.match.params.gitUsername;
-        fetch(`/api/users/${gitUsername}`)
+        fetch(`${process.env.REACT_APP_SERVER_URL}/api/users/${gitUsername}`)
             .then((response) => response.json())
             .then((info) => {
                 setUserInfo(info);

@@ -13,7 +13,7 @@ function Section() {
     });
 
     useEffect(() => {
-        fetch(`/api/users`)
+        fetch(`${process.env.REACT_APP_SERVER_URL}/api/users`)
         .then((response)=>response.json())
         .then((data)=>{
             setInputData(data);
